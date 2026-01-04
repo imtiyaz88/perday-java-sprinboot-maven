@@ -35,3 +35,40 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Maven ###
+# Maven build output
+target/
+
+# Maven backup and generated files
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Maven wrapper timing file
+.mvn/timing.properties
+
+### macOS ###
+# macOS Finder metadata and resource forks
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+### Sensitive keys ###
+# ignore common SSH/private key names and key file extensions
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+*.pem
+*.key
+*.ppk
+
+# ignore incidental files that may contain eval/ssh-agent outputs
+eval*ssh-agent*
