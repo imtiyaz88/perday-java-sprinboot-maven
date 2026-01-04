@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "66242e1a-1378-4016-8b81-16d474d7d169",
+		"name": "Perday",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42957378"
+	},
+	"item": [
+		{
+			"name": "Welcome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{perday_URL}}/welcome/",
+					"host": [
+						"{{perday_URL}}"
+					],
+					"path": [
+						"welcome",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{perday_URL}}/actuator/health/",
+					"host": [
+						"{{perday_URL}}"
+					],
+					"path": [
+						"actuator",
+						"health",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"advance\",\n    \"category\" : \"NEEDS\",\n    \"description\" : \"living\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{perday_URL}}/api/expenses",
+					"host": [
+						"{{perday_URL}}"
+					],
+					"path": [
+						"api",
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{perday_URL}}/api/expenses/1",
+					"host": [
+						"{{perday_URL}}"
+					],
+					"path": [
+						"api",
+						"expenses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"advance\",\n    \"category\" : \"NEEDS\",\n    \"description\" : \"living\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{perday_URL}}/api/expenses",
+					"host": [
+						"{{perday_URL}}"
+					],
+					"path": [
+						"api",
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{perday_URL}}/api/expenses",
+					"host": [
+						"{{perday_URL}}"
+					],
+					"path": [
+						"api",
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"advance\",\n    \"category\" : \"NEEDS\",\n    \"description\" : \"living well\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{perday_URL}}/api/expenses/1",
+					"host": [
+						"{{perday_URL}}"
+					],
+					"path": [
+						"api",
+						"expenses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{perday_URL}}/api/expenses",
+					"host": [
+						"{{perday_URL}}"
+					],
+					"path": [
+						"api",
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Replace",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"advance\",\n    \"category\" : \"NEEDS\",\n    \"description\" : \"living superbly\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{perday_URL}}/api/expenses/2",
+					"host": [
+						"{{perday_URL}}"
+					],
+					"path": [
+						"api",
+						"expenses",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Copy 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{perday_URL}}/api/expenses",
+					"host": [
+						"{{perday_URL}}"
+					],
+					"path": [
+						"api",
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{perday_URL}}/api/expenses/1",
+					"host": [
+						"{{perday_URL}}"
+					],
+					"path": [
+						"api",
+						"expenses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Copy 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{perday_URL}}/api/expenses",
+					"host": [
+						"{{perday_URL}}"
+					],
+					"path": [
+						"api",
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HEAD",
+			"request": {
+				"method": "HEAD",
+				"header": [],
+				"url": {
+					"raw": "{{perday_URL}}/api/expenses",
+					"host": [
+						"{{perday_URL}}"
+					],
+					"path": [
+						"api",
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OPTIONS",
+			"request": {
+				"method": "OPTIONS",
+				"header": [],
+				"url": {
+					"raw": "{{perday_URL}}/api/expenses",
+					"host": [
+						"{{perday_URL}}"
+					],
+					"path": [
+						"api",
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "perday_URL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
