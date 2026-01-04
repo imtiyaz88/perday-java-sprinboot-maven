@@ -1,0 +1,79 @@
+
+@perday_URL = http://localhost:8080
+
+### Welcome
+GET {{perday_URL}}/welcome/
+Accept: application/json
+
+### Health
+GET {{perday_URL}}/actuator/health/
+Accept: application/json
+
+### Create
+POST {{perday_URL}}/api/expenses
+Content-Type: application/json
+
+{
+	"name": "advance",
+	"category": "NEEDS",
+	"description": "living"
+}
+
+### Get One
+GET {{perday_URL}}/api/expenses/1
+Accept: application/json
+
+### Create Copy
+POST {{perday_URL}}/api/expenses
+Content-Type: application/json
+
+{
+	"name": "advance",
+	"category": "NEEDS",
+	"description": "living"
+}
+
+### Get All
+GET {{perday_URL}}/api/expenses
+Accept: application/json
+
+### Update
+PATCH {{perday_URL}}/api/expenses/1
+Content-Type: application/json
+
+{
+	"name": "advance",
+	"category": "NEEDS",
+	"description": "living well"
+}
+
+### Get All Copy
+GET {{perday_URL}}/api/expenses
+Accept: application/json
+
+### Replace
+PUT {{perday_URL}}/api/expenses/2
+Content-Type: application/json
+
+{
+	"name": "advance",
+	"category": "NEEDS",
+	"description": "living superbly"
+}
+
+### Get All Copy 2
+GET {{perday_URL}}/api/expenses
+Accept: application/json
+
+### Delete
+DELETE {{perday_URL}}/api/expenses/1
+
+### Get All Copy 3
+GET {{perday_URL}}/api/expenses
+Accept: application/json
+
+### HEAD
+HEAD {{perday_URL}}/api/expenses
+
+### OPTIONS
+OPTIONS {{perday_URL}}/api/expenses
