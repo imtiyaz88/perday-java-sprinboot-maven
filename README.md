@@ -83,3 +83,27 @@ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a
 
 mac:
 To show hidden files in Finder on a Mac, you can use the keyboard shortcut Command + Shift + . 
+
+## Docker
+
+Build the Docker image (multi-stage; builds the jar then packages it):
+
+```bash
+docker build -t perday/perday-expense-manager:latest .
+```
+
+Run with a local MongoDB (on macOS Docker, use `host.docker.internal` to reach the host):
+
+```bash
+# Start MongoDB (if not already running):
+docker run -d --name perday-mongodb-container1 -p 27017:27017 -v perday-mongodb-volume1:/data/db mongo
+
+# Run the app image, pointing it to MongoDB on the host
+docker run -d \
+  --name perday-expense-manager-container1 \
+  -p 8080:8080 \
+  -e SPRING_DATA_MONGODB_URI="mongodb://host.docker.internal:27017/perday-mongodb-database1" \
+  perday/perday-expense-manager:latest
+```
+
+Alternative: build and run the jar locally then run the image using the already-built jar. The Docker multi-stage build will run `mvn package` for you if you want a single-step image build.ß
