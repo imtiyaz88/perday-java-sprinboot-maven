@@ -1,7 +1,7 @@
 
 @perday_URL = http://localhost:8080
-@expense_id_1 = 6963afd5c09801193f2e6ca6
-@expense_id_2 = 6963afeec09801193f2e6ca7
+@expense_id_1 = 6963bb1c616694205243fd54
+@expense_id_2 = 6963bb3d616694205243fd55
 
 ### Welcome
 GET {{perday_URL}}/welcome/

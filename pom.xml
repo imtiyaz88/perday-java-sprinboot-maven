@@ -12,9 +12,9 @@
     </parent>
 
     <groupId>com.perday</groupId>
-    <artifactId>expense-manager</artifactId>
+    <artifactId>perday-expense-manager</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>expense-manager</name>
+    <name>perday-expense-manager</name>
     <description>Expense Management REST API</description>
 
     <properties>
