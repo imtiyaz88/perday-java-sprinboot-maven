@@ -1,5 +1,7 @@
 
 @perday_URL = http://localhost:8080
+@expense_id_1 = 6963afd5c09801193f2e6ca6
+@expense_id_2 = 6963afeec09801193f2e6ca7
 
 ### Welcome
 GET {{perday_URL}}/welcome/
@@ -20,7 +22,7 @@ Content-Type: application/json
 }
 
 ### Get One
-GET {{perday_URL}}/api/expenses/1
+GET {{perday_URL}}/api/expenses/{{expense_id_1}}
 Accept: application/json
 
 ### Create Copy
@@ -38,7 +40,7 @@ GET {{perday_URL}}/api/expenses
 Accept: application/json
 
 ### Update
-PATCH {{perday_URL}}/api/expenses/1
+PATCH {{perday_URL}}/api/expenses/{{expense_id_1}}
 Content-Type: application/json
 
 {
@@ -52,7 +54,7 @@ GET {{perday_URL}}/api/expenses
 Accept: application/json
 
 ### Replace
-PUT {{perday_URL}}/api/expenses/2
+PUT {{perday_URL}}/api/expenses/{{expense_id_2}}
 Content-Type: application/json
 
 {
@@ -66,7 +68,7 @@ GET {{perday_URL}}/api/expenses
 Accept: application/json
 
 ### Delete
-DELETE {{perday_URL}}/api/expenses/1
+DELETE {{perday_URL}}/api/expenses/{{expense_id_1}}
 
 ### Get All Copy 3
 GET {{perday_URL}}/api/expenses

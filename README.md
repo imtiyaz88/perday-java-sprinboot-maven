@@ -1,6 +1,48 @@
 
 # Getting Started
 
+# To get MongoDB container up and running:
+docker run -d \
+  --name perday-mongodb-container1 \
+  -p 27017:27017 \
+  -v perday-mongodb-volume1:/data/db \
+  mongo
+
+# To connect to the MongoDB from Compass
+use connection string 
+  perday-mongodb-conn1 = mongodb://localhost:27017/
+add credentials if needed
+create database
+  perday-mongodb-database1
+create collection in the database
+  perday-mongodb-database1-collection1
+create document in the collection
+  {
+  "_id": {
+    "$oid": "6963662c7b1a2bd94119c4c6"
+  },
+  "name": "Imtiyaz",
+  "city": "Bangalore",
+  "createdAt": {
+    "$date": "2026-01-11T00:00:00.000Z"
+  }
+}
+query the document
+  { city: "Bangalore" }
+
+# To run the maven app
+Open the ExpenseManagerApplication.java and run the main class
+
+# Run all the HTTP method requests 
+Open the perday_javaspring.http and run all the requests in sequence.
+Update the expense_id_1 and expense_id_2 with the id values returned in the responses to POST requests
+
+# verify the inserted records in the Mongodb
+    perday-mongodb-conn1
+    |--perday-mongodb-database1 
+    |---expenses
+
+
 ### Reference Documentation
 For further reference, please consider the following sections:
 
