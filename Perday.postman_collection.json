@@ -76,14 +76,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{perday_URL}}/api/expenses/1",
+					"raw": "{{perday_URL}}/api/expenses/{{expense_id_1}}",
 					"host": [
 						"{{perday_URL}}"
 					],
 					"path": [
 						"api",
 						"expenses",
-						"1"
+						"{{expense_id_1}}"
 					]
 				}
 			},
@@ -149,14 +149,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{perday_URL}}/api/expenses/1",
+					"raw": "{{perday_URL}}/api/expenses/{{expense_id_1}}",
 					"host": [
 						"{{perday_URL}}"
 					],
 					"path": [
 						"api",
 						"expenses",
-						"1"
+						"{{expense_id_1}}"
 					]
 				}
 			},
@@ -195,14 +195,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{perday_URL}}/api/expenses/2",
+					"raw": "{{perday_URL}}/api/expenses/{{expense_id_2}}",
 					"host": [
 						"{{perday_URL}}"
 					],
 					"path": [
 						"api",
 						"expenses",
-						"2"
+						"{{expense_id_2}}"
 					]
 				}
 			},
@@ -312,6 +312,16 @@
 	"variable": [
 		{
 			"key": "perday_URL",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "expense_id_1",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "expense_id_2",
 			"value": "",
 			"type": "default"
 		}

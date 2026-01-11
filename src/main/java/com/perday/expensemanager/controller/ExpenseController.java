@@ -39,7 +39,7 @@ public class ExpenseController {
         @ApiResponse(responseCode = "404", description = "Expense not found", content = @Content)
     })
     @GetMapping("/{id}")
-    public ResponseEntity<Expense> getExpenseById(@Parameter(description = "ID of the expense to retrieve") @PathVariable Long id) {
+    public ResponseEntity<Expense> getExpenseById(@Parameter(description = "ID of the expense to retrieve") @PathVariable String id) {
         Expense expense = expenseService.getExpenseById(id);
         return ResponseEntity.ok(expense);
     }
@@ -61,7 +61,7 @@ public class ExpenseController {
     })
     @PatchMapping("/{id}")
     public ResponseEntity<Expense> updateExpense(
-            @Parameter(description = "ID of the expense to update") @PathVariable Long id,
+            @Parameter(description = "ID of the expense to update") @PathVariable String id,
             @Parameter(description = "Updated expense details") @RequestBody Expense expenseDetails) {
         Expense updatedExpense = expenseService.updateExpense(id, expenseDetails);
         return ResponseEntity.ok(updatedExpense);
@@ -76,7 +76,7 @@ public class ExpenseController {
     })
     @PutMapping("/{id}")
     public ResponseEntity<Expense> replaceExpense(
-            @Parameter(description = "ID of the expense to replace") @PathVariable Long id,
+            @Parameter(description = "ID of the expense to replace") @PathVariable String id,
             @Parameter(description = "New expense details") @RequestBody Expense expenseDetails) {
         Expense replacedExpense = expenseService.replaceExpense(id, expenseDetails);
         return ResponseEntity.ok(replacedExpense);
@@ -88,7 +88,7 @@ public class ExpenseController {
         @ApiResponse(responseCode = "404", description = "Expense not found", content = @Content)
     })
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteExpense(@Parameter(description = "ID of the expense to delete") @PathVariable Long id) {
+    public ResponseEntity<?> deleteExpense(@Parameter(description = "ID of the expense to delete") @PathVariable String id) {
         expenseService.deleteExpense(id);
         return ResponseEntity.ok().build();
     }

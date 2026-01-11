@@ -18,7 +18,7 @@ public class ExpenseService {
         return expenseRepository.findAll();
     }
     
-    public Expense getExpenseById(Long id) {
+    public Expense getExpenseById(String id) {
         return expenseRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Expense not found with id: " + id));
     }
@@ -30,7 +30,7 @@ public class ExpenseService {
         return expenseRepository.save(expense);
     }
     
-    public Expense updateExpense(Long id, Expense expenseDetails) {
+    public Expense updateExpense(String id, Expense expenseDetails) {
         Expense expense = getExpenseById(id);
         expense.setDescription(expenseDetails.getDescription());
         expense.setAmount(expenseDetails.getAmount());
@@ -41,7 +41,7 @@ public class ExpenseService {
     }
 
     // method for replacing an expense
-    public Expense replaceExpense(Long id, Expense expenseDetails) {
+    public Expense replaceExpense(String id, Expense expenseDetails) {
         Expense expense = getExpenseById(id);
         // ensure a paid date is present
         if (expenseDetails.getExpensePaidDateTime() == null) {
@@ -52,7 +52,7 @@ public class ExpenseService {
         return expenseRepository.save(expense);
     }
 
-    public void deleteExpense(Long id) {
+    public void deleteExpense(String id) {
         Expense expense = getExpenseById(id);
         expenseRepository.delete(expense);
     }

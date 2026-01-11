@@ -1,22 +1,17 @@
 package com.perday.expensemanager.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import io.swagger.v3.oas.annotations.media.Schema;
 
-@Entity
-@Table(name = "expenses")
+@Document(collection = "expenses")
 @Schema(description = "Expense Entity")
 public class Expense {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Schema(description = "Unique identifier of the expense", example = "1")
-    private Long id;
+    @Schema(description = "Unique identifier of the expense", example = "64b7c3f2e7f8a3a1b2c3d4e5")
+    private String id;
     
     @Schema(description = "Description of the expense", example = "Grocery shopping")
     private String description;
@@ -42,11 +37,11 @@ public class Expense {
     @Schema(description = "End date and time of the expense period", example = "2045-10-06T00:00:00")
     private LocalDateTime expensePeriodEnd = LocalDateTime.now().plusYears(20);
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
